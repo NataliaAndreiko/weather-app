@@ -1,0 +1,39 @@
+.image {
+  max-width: 120px;
+  margin: 0 auto;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: 40px auto 0;
+  }
+}
+
+.humidity, .wind {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.temp {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin: 20px 0 1px;
+}
+
+.text p {
+  font-size: 0.7em;
+}
+
+.text span {
+  font-weight: 500;
+}
