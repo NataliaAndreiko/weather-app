@@ -1,4 +1,4 @@
-import "../styles/weather.scss"
+import styles from "../styles/weather.module.scss"
 
 const Weather = (props) => {
     const {weatherInfo} = props;
@@ -29,22 +29,22 @@ const Weather = (props) => {
     }
 
     return (
-        <div className="weather">
-            <img src={image} alt="" className="image"/>
-            <p className="temp">{Math.round(weatherInfo.main.temp)}°C</p>
-            <p className="description">{weatherInfo.weather[0].description}</p>
+        <div className={styles.weather}>
+            <img src={image} alt="" className={styles.image}/>
+            <p className={styles.temp}>{Math.round(weatherInfo.main.temp)}°C</p>
+            <p className={styles.description}>{weatherInfo.weather[0].description}</p>
 
-            <div className="weather-details">
-                <div className="humidity">
+            <div className={styles.weather_details}>
+                <div className={styles.humidity}>
                     <i className="fa-solid fa-water"></i>
-                    <div className="text">
+                    <div className={styles.text}>
                         <span>{weatherInfo.main.humidity}%</span>
                         <p>Humidity</p>
                     </div>
                 </div>
-                <div className="wind">
+                <div className={styles.wind}>
                     <i className="fa-solid fa-wind"></i>
-                    <div className="text">
+                    <div className={styles.text}>
                         <span>{Math.round(weatherInfo.wind.speed)} km/h</span>
                         <p>Wind Speed</p>
                     </div>
